@@ -15,4 +15,9 @@ const deleteBookByCode = (code) => {
   return deleteBook;
 };
 
-module.exports = { getAllBooks, getBookByCode, deleteBookByCode };
+const addNewBook = (newBook) => {
+  const out = adapter.addNewBook(newBook);
+  return out;
+};
+
+module.exports = { getAllBooks, getBookByCode, deleteBookByCode, addNewBook };

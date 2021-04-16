@@ -22,4 +22,10 @@ router.delete("/deleteBook/:code", (req, res) => {
   res.send(data);
 });
 
+router.post("/addBook", (req, res) => {
+  const newBook = req.body;
+  const output = controller.addNewBook(newBook);
+  res.send(output);
+});
+
 module.exports = router;
