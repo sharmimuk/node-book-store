@@ -10,4 +10,10 @@ router.get("/books", (req, res) => {
   res.send(data);
 });
 
+router.get("/book/:code", (req, res) => {
+  const code = req.params.code;
+  const book = controller.getBookByCode(code);
+  res.send(book);
+});
+
 module.exports = router;

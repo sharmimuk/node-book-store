@@ -5,4 +5,9 @@ const getAllBooks = () => {
   return books;
 };
 
-module.exports = { getAllBooks };
+const getBookByCode = (code) => {
+  const book = adapter.getBookByCode(code);
+  return book;
+};
+
+module.exports = { getAllBooks, getBookByCode };
