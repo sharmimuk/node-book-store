@@ -10,4 +10,9 @@ const getBookByCode = (code) => {
   return book;
 };
 
-module.exports = { getAllBooks, getBookByCode };
+const deleteBookByCode = (code) => {
+  const deleteBook = adapter.deleteBookByCode(code);
+  return deleteBook;
+};
+
+module.exports = { getAllBooks, getBookByCode, deleteBookByCode };

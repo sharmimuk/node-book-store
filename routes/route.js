@@ -16,4 +16,10 @@ router.get("/book/:code", (req, res) => {
   res.send(book);
 });
 
+router.delete("/deleteBook/:code", (req, res) => {
+  const code = req.params.code;
+  const data = controller.deleteBookByCode(code);
+  res.send(data);
+});
+
 module.exports = router;
