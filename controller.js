@@ -1,12 +1,12 @@
 const adapter = require("./lib/books-adapter");
 
-const getAllBooks = () => {
-  const books = adapter.getAllBooks();
+const getAllBooks = async () => {
+  const books = await adapter.getAllBooks();
   return books;
 };
 
-const getBookByCode = (code) => {
-  const book = adapter.getBookByCode(code);
+const getBookByCode = async (code) => {
+  const book = await adapter.getBookByCode(code);
   return book;
 };
 

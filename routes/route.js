@@ -5,14 +5,14 @@ router.get("/", (req, res) => {
   res.send("Welcome to my Mini Library !!!");
 });
 
-router.get("/books", (req, res) => {
-  const data = controller.getAllBooks();
+router.get("/books", async (req, res) => {
+  const data = await controller.getAllBooks();
   res.send(data);
 });
 
-router.get("/book/:code", (req, res) => {
+router.get("/book/:code", async (req, res) => {
   const code = req.params.code;
-  const book = controller.getBookByCode(code);
+  const book = await controller.getBookByCode(code);
   res.send(book);
 });
 
